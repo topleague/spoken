@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../config';
+---
+<Base title="About" description={`About ${SITE.title}`}>
+  <section class="article-head">
+    <h1>About</h1>
+  </section>
+  <div class="prose">
+    <p>This is a placeholder about page. Write a few honest sentences about who you are and what this blog is for.</p>
+    <p>The theme is a small Astro project: Markdown files go in <code>src/content/posts</code>, and <code>npm run build</code> turns them into plain HTML in <code>dist/</code>. There is no database, no CMS and no server to run.</p>
+  </div>
+</Base>

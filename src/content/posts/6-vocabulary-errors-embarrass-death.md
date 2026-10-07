@@ -1,5 +1,6 @@
 ---
 title: 6 Vocabulary Errors That Might Embarrass You to Death
+description: ""
 date: 2012-03-13
 excerpt: This is NOT exactly the kind of post I’d like to write, but I guess I MUST.
   Despite being passionate about the English language, I’m still far from being perfect

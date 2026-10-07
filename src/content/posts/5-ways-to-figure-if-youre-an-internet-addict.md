@@ -1,5 +1,6 @@
 ---
 title: 5 Ways to Figure If You’re An Internet Addict
+description: ""
 date: 2010-11-28
 excerpt: No shit, but it took me almost a decade to realize that I’m an Internet addict.
   Well, it’s not just a problem but maybe, a huge problem. My interest in the Internet

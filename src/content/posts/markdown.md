@@ -42,3 +42,15 @@ author: Susanta Sahoo
 ---
 
 ```
+
+____________________________________________________________
+
+## MarkDown Table 
+
+```html
+| Template | Status | URL |
+|---|---|---|
+| SaaS | Done | https://example.com/saas |
+| Blog | Pending | https://example.com/blog |
+| Startup | Done | https://example.com/startup |
+```

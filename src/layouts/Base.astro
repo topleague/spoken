@@ -14,6 +14,12 @@ const year = new Date().getFullYear();
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
     <meta name="color-scheme" content="light dark" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
@@ -32,6 +38,10 @@ const year = new Date().getFullYear();
           {SITE.nav.map((item) => (
             <a href={item.href} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a>
           ))}
+          <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode" title="Toggle theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
         </nav>
       </div>
     </header>
@@ -44,5 +54,16 @@ const year = new Date().getFullYear();
         <span>Built with Astro. Static, no CMS.</span>
       </div>
     </footer>
+    <script is:inline>
+      document.querySelector('.theme-toggle')?.addEventListener('click', function () {
+        var root = document.documentElement;
+        var isDark = root.dataset.theme
+          ? root.dataset.theme === 'dark'
+          : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var next = isDark ? 'light' : 'dark';
+        root.dataset.theme = next;
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    </script>
   </body>
 </html>

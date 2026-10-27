@@ -37,3 +37,32 @@ https://www.rendify.co/#How-it-works
 https://www.a1.gallery/websites/fun-agency
 https://www.a1.gallery/websites/fun-landing
 ```
+
+## Headlines Brainstorming 
+
+- Your digital department. Without the agency overhead.
+
+- Your business needs to go digital 
+- Your business needs to go online
+- Your business needs to go online. And keep growing. 
+
+- We build your online presence. And support it for a lifetime.
+
+- Build your online business, without worrying about the domain expiry 
+
+- Your online business is in our safe hands 
+- Your online business needs expert hands 
+
+- Build Quick Online Presence . At Fraction of Costs. 
+
+- Don’t Just Build a Website, Build a Robust Online Presence 
+
+- Don’t Just Build a Website, Craft a Solid Online Presence 
+
+- Don’t Just Build a Website, Craft One that Boosts Your Business
+
+- Website is Just a Start, Strong Online Presence Matters More
+
+- Build Your Whole Online Presence, Not Just another Website 
+
+- Build Your Online Presence, Not Just Another Website.

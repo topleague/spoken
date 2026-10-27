@@ -1,7 +1,7 @@
 ---
 title: Spoken Code Backup 
 description: "Backup of any text/code in Spoken theme"
-date: 2026-10-26
+date: 2026-10-27
 excerpt: Just a random excerpt …
 authorAvatar: https://avatars.githubusercontent.com/u/10867370?v=4&size=64
 layout: split

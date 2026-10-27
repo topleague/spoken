@@ -11,7 +11,7 @@ tags:
 author: Susanta Sahoo
 ---
 
-## Copywriting Advice by Calude
+## Copywriting Advice by Claude
 
 - The best idea from your own material is missing. Your strongest emotional proof was the client saying “I don’t have to worry about anything anymore”.
 - The page shows the stakes (what goes wrong) but never the success picture (what life looks like afterwards).

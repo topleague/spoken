@@ -9,6 +9,7 @@ tags:
 - popular
 - rant
 author: Susanta Sahoo
+pinned: true
 ---
 
 ____________________________________________________________

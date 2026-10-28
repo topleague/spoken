@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Search" description="Search all writing.">
+  <section class="article-head">
+    <h1>Search</h1>
+  </section>
+
+  <!-- Pagefind's CSS and JS load only on this page, never on normal pages. -->
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+  <div id="search"></div>
+  <noscript><p class="muted">Search needs JavaScript. You can browse by <a href="/tags/">tag</a> instead.</p></noscript>
+  {import.meta.env.DEV && (
+    <p class="muted">Search is built by <code>npm run build</code> and isn't available in <code>npm run dev</code>. Try <code>npm run build &amp;&amp; npm run preview</code>.</p>
+  )}
+
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <script is:inline>
+    window.addEventListener('DOMContentLoaded', function () {
+      if (typeof PagefindUI === 'undefined') return;
+      var ui = new PagefindUI({
+        element: '#search',
+        showSubResults: true,
+        showImages: false,
+        resetStyles: false,
+        translations: { placeholder: 'Search writing…' },
+      });
+      var q = new URLSearchParams(location.search).get('q');
+      if (q) ui.triggerSearch(q);
+      var input = document.querySelector('#search input');
+      if (input) input.focus();
+    });
+  </script>
+</Base>
+
+<style is:global>
+  #search {
+    --pagefind-ui-scale: 1;
+    --pagefind-ui-primary: var(--fg);
+    --pagefind-ui-text: var(--fg);
+    --pagefind-ui-background: var(--bg);
+    --pagefind-ui-border: var(--line);
+    --pagefind-ui-tag: var(--line);
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 8px;
+    --pagefind-ui-font: var(--sans);
+    padding-bottom: 3rem;
+  }
+  #search .pagefind-ui__result-title { font-family: var(--serif); font-weight: 500; }
+  #search .pagefind-ui__result-link { text-decoration: none; }
+  #search .pagefind-ui__result-link:hover { text-decoration: underline; }
+</style>

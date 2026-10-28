@@ -35,7 +35,7 @@ a:hover { text-decoration-color: currentColor; }
 .site-header { padding: 2rem 0 0; }
 .site-header .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
 .brand { font-weight: 600; letter-spacing: -0.01em; text-decoration: none; }
-.nav { display: flex; align-items: center; gap: 1.25rem; font-size: 0.95rem; color: var(--muted); }
+.nav { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 0.5rem 1.25rem; font-size: 0.95rem; color: var(--muted); }
 .nav a { text-decoration: none; }
 .nav a:hover, .nav a[aria-current='page'] { color: var(--fg); }
 
@@ -74,6 +74,26 @@ a:hover { text-decoration-color: currentColor; }
 }
 .post-list p { margin: 0; color: var(--muted); }
 .post-list a:hover h2 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
+
+/* pinned label + post meta row */
+.post-list .post-meta { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.35rem; }
+.post-list .post-meta time { margin-bottom: 0; }
+.pin-badge {
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--fg); border: 1px solid var(--fg); border-radius: 999px; padding: 0.05rem 0.5rem; line-height: 1.5;
+}
+
+/* tags and categories */
+.tag-list, .term-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag-list { margin-top: 1.25rem; }
+.tag-list a, .term-list a {
+  display: inline-block; font-size: 0.85rem; color: var(--muted); text-decoration: none;
+  border: 1px solid var(--line); border-radius: 999px; padding: 0.15rem 0.75rem;
+}
+.tag-list a:hover, .term-list a:hover { color: var(--fg); border-color: var(--fg); }
+.term-list a span { opacity: 0.6; margin-left: 0.25rem; }
+.term-heading { font-family: var(--serif); font-weight: 500; font-size: 1.3rem; margin: 2rem 0 1rem; }
+.muted { color: var(--muted); }
 
 /* article */
 .article-head { padding: clamp(3rem, 10vw, 6rem) 0 2rem; }

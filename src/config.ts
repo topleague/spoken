@@ -6,6 +6,8 @@ export const SITE = {
   author: 'Your Name',
   nav: [
     { label: 'Writing', href: '/' },
+    { label: 'Tags', href: '/tags/' },
+    { label: 'Search', href: '/search/' },
     { label: 'About', href: '/about/' },
     { label: 'RSS', href: '/rss.xml' },
   ],

@@ -1,0 +1,31 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getPosts, getTags, getCategories } from '../../lib/posts';
+
+const posts = await getPosts();
+const tags = getTags(posts);
+const categories = getCategories(posts);
+---
+<Base title="Tags" description="Browse writing by tag and category.">
+  <section class="article-head">
+    <h1>Tags</h1>
+  </section>
+  {categories.length > 0 && (
+    <>
+      <h2 class="term-heading">Categories</h2>
+      <ul class="term-list">
+        {categories.map((c) => (
+          <li><a href={`/category/${c.slug}/`}>{c.name} <span>{c.count}</span></a></li>
+        ))}
+      </ul>
+    </>
+  )}
+  <h2 class="term-heading">Tags</h2>
+  {tags.length === 0 ? <p class="muted">No tags yet.</p> : (
+    <ul class="term-list">
+      {tags.map((t) => (
+        <li><a href={`/tags/${t.slug}/`}>{t.name} <span>{t.count}</span></a></li>
+      ))}
+    </ul>
+  )}
+</Base>

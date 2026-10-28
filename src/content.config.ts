@@ -8,6 +8,14 @@ const posts = defineCollection({
     description: z.string(),
     date: z.coerce.date(),
     draft: z.boolean().default(false),
+    // Tags: a list. Posts without tags still work.
+    tags: z.array(z.string()).default([]),
+    // Category: one optional value per post.
+    category: z.string().optional(),
+    // Pinning: pinned posts float to the top of the home page.
+    // pinOrder is optional; lower numbers come first (1, 2, 3...).
+    pinned: z.boolean().default(false),
+    pinOrder: z.number().optional(),
   }),
 });
 

@@ -36,7 +36,13 @@ const year = new Date().getFullYear();
         <a class="brand" href="/">{SITE.title}</a>
         <nav class="nav" aria-label="Main">
           {SITE.nav.map((item) => (
-            <a href={item.href} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a>
+            item.icon === 'search' ? (
+              <a class="nav-icon" href={item.href} aria-label={item.label} title={item.label} aria-current={path === item.href ? 'page' : undefined}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              </a>
+            ) : (
+              <a href={item.href} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a>
+            )
           ))}
           <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode" title="Toggle theme">
             <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -51,6 +57,11 @@ const year = new Date().getFullYear();
     <footer class="site-footer">
       <div class="wrap">
         <span>© {year} {SITE.author}</span>
+        <nav class="footer-nav" aria-label="Footer">
+          {SITE.footerNav.map((item) => (
+            <a href={item.href} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a>
+          ))}
+        </nav>
         <span>Built with Astro. Static, no CMS.</span>
       </div>
     </footer>

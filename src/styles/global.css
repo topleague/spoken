@@ -39,8 +39,12 @@ a:hover { text-decoration-color: currentColor; }
 .nav a { text-decoration: none; }
 .nav a:hover, .nav a[aria-current='page'] { color: var(--fg); }
 
-/* resposive menu */
+/* tighter menu spacing on very small phones so it stays on one line */
+@media (max-width: 24rem) { .wrap { padding: 0 1rem; } .nav { gap: 0.5rem 0.8rem; } .site-header .wrap { gap: 0.6rem; } }
 
+/* search icon in the menu */
+.nav-icon { display: inline-flex; line-height: 0; padding: 0.25rem; margin: -0.25rem; }
+.nav-icon svg { width: 1.1rem; height: 1.1rem; }
 
 /* theme toggle */
 .theme-toggle {
@@ -120,6 +124,9 @@ a:hover { text-decoration-color: currentColor; }
 .back:hover { color: var(--fg); }
 
 /* footer */
+.footer-nav { display: flex; gap: 1.25rem; }
+.footer-nav a { text-decoration: none; }
+.footer-nav a:hover, .footer-nav a[aria-current='page'] { color: var(--fg); }
 .site-footer { margin-top: 5rem; padding: 2rem 0 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
 .site-footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 

@@ -40,31 +40,6 @@ a:hover { text-decoration-color: currentColor; }
 .nav a:hover, .nav a[aria-current='page'] { color: var(--fg); }
 
 /* resposive menu */
-@media (max-width: 40rem) {
-  .site-header .wrap { align-items: center; }      /* baseline alignment breaks with a scroll area */
-  .brand { flex: none; }                            /* brand never shrinks */
-  .nav {
-    flex: 1;                                        /* menu takes the space left beside the brand */
-    min-width: 0;                                   /* lets it shrink so it can scroll */
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    gap: 1rem;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: .4rem .25rem;                          /* keeps focus rings from being clipped */
-    margin: -.4rem -.25rem;
-    scrollbar-width: none;
-    overscroll-behavior-x: contain;
-  }
-  .nav::-webkit-scrollbar { display: none; }
-  .nav > * { flex: none; }
-  .theme-toggle {
-    position: sticky; right: 0;                     /* theme toggle stays visible while links scroll under it */
-    margin: 0 0 0 auto;
-    padding: .25rem .25rem .25rem .75rem;
-    background: var(--bg);
-  }
-}
 
 
 /* theme toggle */

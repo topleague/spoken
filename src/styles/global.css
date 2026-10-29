@@ -72,7 +72,7 @@ a:hover { text-decoration-color: currentColor; }
 .hero h1 {
   font-family: var(--serif); font-weight: 500;
   font-size: clamp(2.75rem, 9vw, 5.25rem); line-height: 1.02; letter-spacing: -0.03em;
-  margin: 0 0 1.25rem; text-wrap: balance;
+  margin: 0 0 1.25rem; text-wrap: balance; font-family: Plomb, sans-serif;
 }
 .hero p { margin: 0; font-size: 1.25rem; color: var(--muted); max-width: 30rem; }
 

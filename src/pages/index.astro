@@ -8,7 +8,8 @@ const posts = withPinsFirst(await getPosts());
 ---
 <Base>
   <section class="hero">
-    <h1>{SITE.tagline}</h1>
+    <!-- <h1>{SITE.tagline}</h1> -->
+    <h1>Notes on <span>making things,</span> written plainly.</h1>
     <p>Essays and short notes. No tracking, no feeds to fight, just words on a page.</p>
   </section>
   <PostList posts={posts} showPins />

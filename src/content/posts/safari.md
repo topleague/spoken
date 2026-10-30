@@ -5,7 +5,7 @@ date: 2026-10-30
 excerpt: Just a random excerpt …
 authorAvatar: https://avatars.githubusercontent.com/u/10867370?v=4&size=64
 layout: split
-tags: rant
+tags: [rant]
 author: Susanta Sahoo
 pinned: true
 ---

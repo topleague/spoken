@@ -143,3 +143,7 @@ a:hover { text-decoration-color: currentColor; }
 @media (prefers-reduced-motion: reduce) {
   @view-transition { navigation: none; }
 }
+
+/* Link Design*/
+p a, ul a {border-bottom: #fcfcfc 1px dotted;}
+

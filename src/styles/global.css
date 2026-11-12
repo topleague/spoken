@@ -145,5 +145,6 @@ a:hover { text-decoration-color: currentColor; }
 }
 
 /* Link Design*/
-p a, ul a {border-bottom: #fcfcfc 1px dotted;}
+prose p a, .prose ul a {border-bottom: 1px dotted #a7a76d;}
+
 

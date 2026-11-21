@@ -43,9 +43,11 @@ Lists Search Console properties accessible to the authenticated account.
 
 ## Notes
 
-- Google Cloud project: `named-reporter-515301-d3`
-- GSC property: `https://topleaguetech.com/`
-- GA4 property `001_TLT Property`: `341653401`
-- GA4 property `Top League New – GA4`: `399293981`
+## Audit environment
+
+- Website: Top League Technologies
+- Search Console: Verified website property
+- Analytics: Two GA4 properties configured
+- Authentication: Google Cloud Application Default Credentials
 
 **Scope:** This list contains the commands previously identified as successful. The GA4 account-list command encountered an error and has been excluded. No GA4 data-retrieval command is included because its exact successful syntax is not available in the recorded audit history.
